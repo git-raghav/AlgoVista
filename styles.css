@@ -1,0 +1,357 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background-color: #212121;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Logo animation container */
+#logo-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #212121;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: opacity 1s ease-in-out;
+	z-index: 10;
+}
+
+#logo-text {
+	color: #e8e8e8;
+	margin-top: 20px;
+	font-size: 1.5rem;
+	text-align: center;
+	animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Hide logo container after animation */
+.hide-logo {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* Spinner CSS */
+.spinner {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-left: -75px;
+}
+
+.spinner span {
+	position: absolute;
+	top: 50%;
+	left: var(--left);
+	width: 35px;
+	height: 7px;
+	background: #ffff;
+	animation: dominos 1s ease infinite;
+	box-shadow: 2px 2px 3px 0px black;
+}
+
+.spinner span:nth-child(1) {
+	--left: 80px;
+	animation-delay: 0.125s;
+}
+
+.spinner span:nth-child(2) {
+	--left: 70px;
+	animation-delay: 0.3s;
+}
+
+.spinner span:nth-child(3) {
+	left: 60px;
+	animation-delay: 0.425s;
+}
+
+.spinner span:nth-child(4) {
+	animation-delay: 0.54s;
+	left: 50px;
+}
+
+.spinner span:nth-child(5) {
+	animation-delay: 0.665s;
+	left: 40px;
+}
+
+.spinner span:nth-child(6) {
+	animation-delay: 0.79s;
+	left: 30px;
+}
+
+.spinner span:nth-child(7) {
+	animation-delay: 0.915s;
+	left: 20px;
+}
+
+.spinner span:nth-child(8) {
+	left: 10px;
+}
+
+@keyframes dominos {
+	50% {
+		opacity: 0.7;
+	}
+
+	75% {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	80% {
+		opacity: 1;
+	}
+}
+
+/* LANDING PAGE */
+#landing-page {
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	animation: fadeIn 1.5s forwards 3s;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #212121;
+}
+
+/* Slide up heading */
+#heading {
+	color: #faf0e6;
+	font-size: 3rem;
+	margin-bottom: 20px;
+	position: relative;
+	animation: slideUp 2s forwards 3.5s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		top: 0; /* Initially in center */
+	}
+	100% {
+		top: -180px; /* Slide up */
+	}
+}
+
+/* Footer */
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #212121; /* Dark background */
+	color: #faf0e6; /* Linen text */
+	text-align: center;
+	padding: 10px 0;
+}
+
+footer a {
+	color: #faf0e6;
+	margin: 0 15px;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* Theme Toggle */
+.themeToggle {
+	color: #bbb;
+	width: 2em;
+}
+
+.themeToggleContainer {
+    width: 2em;
+	position: absolute;
+	top: 20px; /* Place the toggle 20px from the top */
+	right: 20px; /* Place the toggle 20px from the right */
+	z-index: 20; /* Ensure it stays above other content */
+}
+
+.st-sunMoonThemeToggleBtn {
+	position: relative;
+	cursor: pointer;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput {
+	opacity: 0;
+	width: 100%;
+	aspect-ratio: 1;
+}
+
+.st-sunMoonThemeToggleBtn svg {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.4s ease;
+	transform: rotate(40deg);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunMoon {
+	transform-origin: center center;
+	transition: inherit;
+	transform: scale(1);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay {
+	transform-origin: center center;
+	transform: scale(0);
+}
+
+.st-sunMoonThemeToggleBtn svg mask > circle {
+	transition: transform 0.64s cubic-bezier(0.41, 0.64, 0.32, 1.575);
+	transform: translate(0px, 0px);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay2 {
+	animation-delay: 0.05s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay3 {
+	animation-delay: 0.1s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay4 {
+	animation-delay: 0.17s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay5 {
+	animation-delay: 0.25s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay5 {
+	animation-delay: 0.29s !important;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+	transform: rotate(90deg);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
+	transform: translate(16px, -3px);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
+	transform: scale(0.55);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
+	animation: showRay1832 0.4s ease 0s 1 forwards;
+}
+
+@keyframes showRay1832 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Card container to hold both cards side by side */
+.card-container {
+	display: flex;
+	justify-content: space-between; /* Space between the two cards */
+	gap: 20px; /* Space between cards */
+	width: 100%;
+	max-width: 1200px; /* Max width to keep the layout centered on larger screens */
+	margin: 0 auto; /* Center the container */
+	padding: 20px;
+}
+
+/* Individual card styles */
+.card {
+	background-color: #faf0e6; /* Linen background for the card */
+	color: #212121; /* Dark text color */
+	border-radius: 17px; /* Rounded corners for a card look */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
+	flex: 1; /* Makes both cards take equal width */
+	padding: 20px;
+	transition: all 0.3s ease;
+}
+
+.card h2 {
+	margin-bottom: 15px;
+	font-size: 1.5rem;
+}
+
+.card p {
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+.card a {
+	display: inline-block;
+	margin-top: auto; /* Push the button to the bottom if content is small */
+}
+
+/* Hover effect for the card */
+.card:hover {
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deepen the shadow on hover */
+	transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Make buttons inside the card consistent */
+.btn {
+	padding: 12px 25px;
+	background-color: #212121; /* Dark background for buttons */
+	color: #faf0e6; /* Light text on the button */
+	text-decoration: none;
+	font-size: 1rem;
+	border-radius: 5px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid transparent;
+}
+
+.btn:hover {
+	background-color: #e8e1d3; /* Slightly lighter color on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    color: #212121;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+	.card-container {
+		flex-direction: column; /* Stack cards vertically on small screens */
+	}
+	.card {
+		margin-bottom: 20px; /* Space between stacked cards */
+	}
+}

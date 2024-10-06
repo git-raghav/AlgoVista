@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AlgoVista | Dynamic Flow</title>
+		<link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="logo.png">
+	</head>
+	<body>
+		<!-- Logo Section -->
+		<div id="logo-container">
+			<div class="spinner">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<h2 id="logo-text">ALGOVISTA</h2>
+		</div>
+
+		<!-- Main Landing Page -->
+		<div id="landing-page">
+			<h2 id="heading">AlgoVista: See the Flow</h2>
+
+			<!-- Cards -->
+			<div class="card-container">
+				<div class="card">
+					<h2>Sorting</h2>
+					<p>Turn the chaos <br /> into order</p>
+					<a href="Sorting-Visualizer\index.html" class="btn">Visualize</a>
+				</div>
+				<div class="card">
+					<h2>Pathfinding</h2>
+					<p>Turn confusion into direction.</p>
+					<a href="Pathfinding-Visualizer\index.html" class="btn">Visualize</a>
+				</div>
+			</div>
+
+			<!-- Theme Toggle Switch -->
+			<div class="themeToggleContainer">
+				<label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn" type="checkbox">
+					<input type="checkbox" id="themeToggle" class="themeToggleInput" />
+					<svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" stroke="none">
+						<mask id="moon-mask">
+							<rect x="0" y="0" width="20" height="20" fill="white"></rect>
+							<circle cx="11" cy="3" r="8" fill="black"></circle>
+						</mask>
+						<circle class="sunMoon" cx="10" cy="10" r="8" mask="url(#moon-mask)"></circle>
+						<g>
+							<circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+							<circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+							<circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+							<circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+							<circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+							<circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+						</g>
+					</svg>
+				</label>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<a href="#about">About Us</a>
+			<a href="mailto:info@algovista.com">Email Us</a>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
