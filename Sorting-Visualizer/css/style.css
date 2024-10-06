@@ -1,0 +1,281 @@
+:root {
+	--primary-color: #212121;
+	--secondary-color: #212121;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	user-select: none;
+	background-color: var(--primary-color);
+}
+body {
+	position: relative;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: stretch;
+}
+#logo-container {
+    position: absolute;
+    height: 40px;
+    left: 10px;
+}
+
+#logo-container img {
+    height: 100%;
+}
+/* Title CSS */
+.title {
+	background-color: #212121;
+	text-align: center;
+	font-size: 1.5em;
+	padding-block: 0.5em;
+	color: #faf0e6;
+	cursor: pointer;
+	position: absolute;
+	left: 70px;
+}
+
+.title:hover {
+	color: #1abc9c;
+}
+
+/* Navbar CSS */
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.8em;
+	font-size: 16px;
+	min-height: 70px;
+	padding-block: 0.6em;
+	background-color: var(--secondary-color);
+	box-shadow: #1abc9c 0px 0px 0px 1px;
+}
+.navbar a {
+	all: unset;
+	cursor: pointer;
+	color: #faf0e6;
+	padding: 8px 10px;
+	border-radius: 6px;
+	transition: 0.3s;
+	background-color: #212121;
+}
+.navbar a:hover {
+	background-color: transparent;
+	color: #1abc9c;
+}
+.navbar select {
+	background-color: #212121; /* Default background color */
+	color: #faf0e6; /* Text color */
+	padding: 6px 8px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	text-align-last: center;
+}
+
+.navbar option {
+	background-color: #212121; /* Option background color */
+	color: #faf0e6; /* Option text color */
+	padding: 6px 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Hover effect for dropdown options */
+.navbar option:hover {
+	background-color: #1abc9c; /* Green on hover */
+	color: white; /* White text on hover */
+}
+
+/* Remove the default outline on focus */
+.navbar select:focus {
+	outline: none;
+}
+
+.navbar #menu {
+	width: fit-content;
+	outline: none;
+	border: none;
+	padding: 6px 8px;
+	background-color: #212121;
+	color: #faf0e6;
+	font-size: 16px;
+}
+.navbar #menu:hover {
+	background-color: transparent;
+	color: #1abc9c;
+}
+.navbar > .icon {
+	display: none;
+}
+#menu,
+#random,
+#start {
+	cursor: pointer;
+}
+
+/* Dropdown Container */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-toggle {
+	background-color: transparent;
+	color: #faf0e6;
+	padding: 6px 8px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+}
+
+/* Correct Caret for the dropdown */
+.dropdown-toggle::after {
+	content: "";
+	position: absolute;
+	right: -13px; /* Adjust this value to position the caret better */
+	top: 45%;
+	transform: translateY(-50%) rotate(45deg);
+	border: solid #faf0e6;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 2.5px; /* Adjust padding to make the caret size consistent */
+	transition: transform 0.3s ease;
+}
+
+/* When dropdown is open, rotate the caret */
+.dropdown:hover .dropdown-toggle::after {
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	min-width: 160px;
+	z-index: 1;
+	margin-top: 5px;
+	padding: 0;
+	list-style-type: none;
+	border-radius: 5px;
+	background-color: #212121; /* Fix white line issue */
+}
+
+/* Dropdown Menu Links */
+.dropdown-menu li {
+	text-align: left;
+}
+
+.dropdown-menu li a {
+	text-decoration: none;
+	color: #faf0e6;
+	display: block;
+	padding: 8px;
+	font-size: 16px;
+}
+
+.dropdown-menu li a:hover {
+	background-color: #1abc9c;
+	color: white;
+}
+
+/* Show dropdown on hover or click */
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-toggle:hover {
+	color: #1abc9c;
+}
+
+/* Center css */
+.center {
+	margin: 0 auto;
+	height: 480px;
+	width: 1200px;
+}
+.array {
+	display: flex;
+	align-items: flex-start;
+	min-height: 100%;
+	height: 100%;
+	padding: 1rem;
+	flex-direction: row;
+}
+.cell {
+	display: flex;
+	align-items: flex-start;
+	flex: 0.5;
+	width: 0.000001%;
+	margin: 1px;
+	background-color: #faf0e6;
+	resize: horizontal;
+	position: relative;
+	transition: all 0.4s ease-in;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+.cell.done {
+	background-color: #a0d683;
+	border-color: #a0d683;
+	color: white;
+	transition: all 0.4s ease-out;
+}
+.cell.visited {
+	border-color: #6184d8;
+	background-color: #6184d8;
+	color: white;
+	transition: 0.5s;
+}
+.cell.current {
+	border-color: #50c5b7;
+	background-color: #50c5b7;
+	color: white;
+	transition: all 0.4s ease-out;
+}
+.cell.min {
+	background-color: #ff1493;
+	border-color: #ff1493;
+	color: white;
+	transition: all 0.4s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		gap: 0.4em;
+	}
+	.title {
+		font-size: 17px;
+	}
+	.navbar *,
+	.navbar a {
+		font-size: 14px;
+	}
+	.footer {
+		font-size: 18px;
+	}
+	a#random {
+		order: 4;
+	}
+	a.start {
+		order: 5;
+	}
+}
+@media screen and (max-width: 550px) {
+	.center {
+		width: 95%;
+	}
+}
