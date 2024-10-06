@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>AlgoVista | Dynamic Flow</title>
 		<link rel="stylesheet" href="styles.css" />
-        <link rel="icon" type="image/png" href="logo.png">
+		<link rel="icon" type="image/png" href="logo.png" />
 	</head>
 	<body>
 		<!-- Logo Section -->
@@ -25,19 +25,29 @@
 
 		<!-- Main Landing Page -->
 		<div id="landing-page">
-			<h2 id="heading">AlgoVista: See the Flow</h2>
+			<h2 id="heading"><img src="logo.png" alt="AlgoVista Logo" id="icon-img" />AlgoVista: See the Flow</h2>
 
 			<!-- Cards -->
 			<div class="card-container">
 				<div class="card">
-					<h2>Sorting</h2>
-					<p>Turn the chaos <br /> into order</p>
-					<a href="Sorting-Visualizer\index.html" class="btn">Visualize</a>
+					<video class="card-video" autoplay loop muted playsinline>
+						<source src="sortvideo.mp4" type="video/mp4" />
+						Sorting Video
+					</video>
+					<div class="card-content">
+						<h2 class="card-title">Sorting</h2>
+						<p class="card-text">Turn chaos into order</p>
+						<a href="Sorting-Visualizer\index.html" class="card-button">Visualize</a>
+					</div>
 				</div>
+
 				<div class="card">
-					<h2>Pathfinding</h2>
-					<p>Turn confusion into direction.</p>
-					<a href="Pathfinding-Visualizer\index.html" class="btn">Visualize</a>
+					<img src="path-2.gif" alt="Pathfinding GIF" class="card-gif" />
+					<div class="card-content">
+						<h2 class="card-title">Pathfinding</h2>
+						<p class="card-text">Turn confusion into direction</p>
+						<a href="Pathfinding-Visualizer\index.html" class="card-button">Visualize</a>
+					</div>
 				</div>
 			</div>
 

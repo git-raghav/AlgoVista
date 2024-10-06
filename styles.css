@@ -11,6 +11,7 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 
 /* Logo animation container */
@@ -139,12 +140,15 @@ html {
 	text-align: center;
 	animation: fadeIn 1.5s forwards 3s;
 	width: 100%;
-	height: 100vh;
+
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	flex-direction: column; /* Stack heading and cards vertically */
+	justify-content: flex-start; /* Align elements starting from the top */
+	align-items: center; /* Center horizontally */
+	/* width: 100%; */
+	height: 100vh;
 	background-color: #212121;
+	padding-top: 100px; /* Add some space at the top if needed */
 }
 
 /* Slide up heading */
@@ -153,7 +157,15 @@ html {
 	font-size: 3rem;
 	margin-bottom: 20px;
 	position: relative;
+	top: 20px;
 	animation: slideUp 2s forwards 3.5s;
+	text-align: center;
+}
+
+#icon-img {
+	height: 50px;
+	margin-right: 15px;
+	padding-top: 10px;
 }
 
 @keyframes fadeIn {
@@ -168,10 +180,10 @@ html {
 
 @keyframes slideUp {
 	0% {
-		top: 0; /* Initially in center */
+		top: 20px; /* Initially in center */
 	}
 	100% {
-		top: -180px; /* Slide up */
+		top: -98px; /* Slide up */
 	}
 }
 
@@ -203,7 +215,7 @@ footer a:hover {
 }
 
 .themeToggleContainer {
-    width: 2em;
+	width: 2em;
 	position: absolute;
 	top: 20px; /* Place the toggle 20px from the top */
 	right: 20px; /* Place the toggle 20px from the right */
@@ -284,66 +296,84 @@ footer a:hover {
 	}
 }
 
-/* Card container to hold both cards side by side */
 .card-container {
 	display: flex;
-	justify-content: space-between; /* Space between the two cards */
-	gap: 20px; /* Space between cards */
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1000px;
 	width: 100%;
-	max-width: 1200px; /* Max width to keep the layout centered on larger screens */
-	margin: 0 auto; /* Center the container */
-	padding: 20px;
+	margin: 0 auto; /* Center horizontally */
+	padding: 20px; /* Add padding to separate from other content */
+	box-sizing: border-box;
 }
 
-/* Individual card styles */
+.card-video {
+	width: 100%;
+	height: 200px;
+	/* object-fit: cover; */
+	object-fit: cover;
+}
+
 .card {
-	background-color: #faf0e6; /* Linen background for the card */
-	color: #212121; /* Dark text color */
-	border-radius: 17px; /* Rounded corners for a card look */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
-	flex: 1; /* Makes both cards take equal width */
-	padding: 20px;
+	background-color: #212121;
+	color: #faf0e6;
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 20px 50px;
+	width: 300px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
+	opacity: 0;
+	transform: translateY(20px);
 }
 
-.card h2 {
-	margin-bottom: 15px;
-	font-size: 1.5rem;
+.card.show {
+	opacity: 1;
+	transform: translateY(0);
 }
 
-.card p {
-	font-size: 1rem;
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 15px 25px 80px #514c46;
+}
+
+.card-gif {
+	width: 100%;
+	height: 200px;
+	object-fit: fill;
+}
+
+.card-content {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.card-title {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card-text {
+	font-size: 16px;
+	line-height: 1.5;
 	margin-bottom: 20px;
 }
 
-.card a {
+.card-button {
 	display: inline-block;
-	margin-top: auto; /* Push the button to the bottom if content is small */
-}
-
-/* Hover effect for the card */
-.card:hover {
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deepen the shadow on hover */
-	transform: translateY(-5px); /* Slight lift on hover */
-}
-
-/* Make buttons inside the card consistent */
-.btn {
-	padding: 12px 25px;
-	background-color: #212121; /* Dark background for buttons */
-	color: #faf0e6; /* Light text on the button */
+	background-color: #faf0e6;
+	color: #212121;
+	padding: 10px 20px;
 	text-decoration: none;
-	font-size: 1rem;
 	border-radius: 5px;
-	transition: background-color 0.3s, box-shadow 0.3s;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	border: 1px solid transparent;
+	transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-	background-color: #e8e1d3; /* Slightly lighter color on hover */
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    color: #212121;
+.card-button:hover {
+	background-color: #e6d8c0;
 }
 
 /* Responsive behavior for smaller screens */
