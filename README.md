@@ -2,6 +2,8 @@
 
 **Unveiling Sorting and Pathfinding through Visuals**
 
+[**Live Demo**](https://git-raghav.github.io/AlgoVista/)
+
 **AlgoVista** is an interactive web application that visualizes various sorting and pathfinding algorithms. Built for learners and enthusiasts, this project helps users understand complex algorithms through intuitive visual representations.
 
 ## Features
