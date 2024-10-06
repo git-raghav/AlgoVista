@@ -45,7 +45,7 @@
 ## How to Use
 
 1. Clone the repository:
-   `git clone https://github.com/yourusername/algovista.git`
+   `git clone https://github.com/git-raghav/AlgoVista.git`
 
 2. Navigate to the project directory:
    `cd algovista`
@@ -65,7 +65,7 @@ Contributions are welcome! Follow these steps to contribute:
 
 2. **Clone Your Fork**
    Clone the forked repository to your local machine using the following command:
-   `git clone https://github.com/yourusername/algovista.git`
+   `git clone https://github.com/git-raghav/AlgoVista.git`
 
 3. **Create a Branch**
    Create a new branch to work on your changes:
@@ -85,4 +85,4 @@ Contributions are welcome! Follow these steps to contribute:
 
 ---
 
-
+Thank you for your interest in AlgoVista! Feel free to reach out for any questions or suggestions.
