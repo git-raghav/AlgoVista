@@ -10,17 +10,18 @@
 
 		<link rel="shortcut icon" type="image/x-icon" href="logo.png" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<title>Sorting visualizer</title>
+		<title>Sorting Visualizer</title>
 	</head>
 
 	<body>
 		<div class="nav-container">
 			<div class="navbar" id="navbar">
-                <div id="logo-container">
-                    <a href="/AlgoVista/landing.html"><img src="logo.png" alt="logo" /></a>
-                </div>
+				<div id="logo-container">
+					<a href="/AlgoVista/landing.html"><img src="logo.png" alt="logo" /></a>
+				</div>
 				<h2 class="title" onclick="window.location.reload()">Sorting Visualizer</h2>
-				<a id="random" onclick="RenderScreen()">Generate Array</a>
+				<a id="random" onclick="RenderScreen()">Random Array</a>
+				<a id="custom-array-link">Custom Array</a>
 				<span class="options">
 					<select name="select sort algorithm" id="menu" class="algo-menu">
 						<option value="0">Choose Algorithm</option>
@@ -71,6 +72,12 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="custom-array-container">
+            <input type="text" name="text" class="input-custom" placeholder="Enter comma-separated values" id="custom-array-input">
+			<button id="custom-array-submit">
+				<a href="#"><span>Submit Array</span></a>
+			</button>
 		</div>
 		<div class="center">
 			<div class="array"></div>
