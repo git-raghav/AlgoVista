@@ -1,4 +1,5 @@
 "use strict";
+const HEIGHT_SCALING_FACTOR = 480;
 const start = async () => {
 	let algoValue = Number(document.querySelector(".algo-menu").value);
 	let speedValue = Number(document.querySelector(".speed-menu").value);
@@ -37,6 +38,7 @@ const RenderList = async () => {
 		node.className = "cell";
 		node.setAttribute("value", String(element));
 		node.style.height = `${3.8 * element}px`;
+        node.innerText = element;
 		arrayNode.appendChild(node);
 	}
 };
@@ -86,8 +88,49 @@ const response = () => {
 	}
 };
 
+const handleCustomArray = async () => {
+    const input = document.getElementById("custom-array-input").value;
+    const values = input.split(",").map((v) => parseInt(v.trim()));
+
+    // Validate input: Check for NaN and ensure all values are numbers
+    if (values.some((v) => isNaN(v))) {
+        alert("Please enter a valid comma-separated list of numbers.");
+        return;
+    }
+
+    // Clear existing bars and render new ones
+    await clearScreen();
+
+    const arrayNode = document.querySelector(".array");
+    const maxHeight = 440;
+    const maxValue = Math.max(...values);
+
+    for (const element of values) {
+        const node = document.createElement("div");
+        node.className = "cell";
+        node.setAttribute("value", String(element));
+
+        // Use the global scaling factor for consistency
+        const barHeight = (element / maxValue) * HEIGHT_SCALING_FACTOR;
+        node.style.height = `${barHeight}px`;
+        node.innerText = element; // Display value inside the bar
+        arrayNode.appendChild(node);
+    }
+};
+
+const toggleCustomArrayVisibility = () => {
+    const customArrayContainer = document.querySelector(".custom-array-container");
+    if (customArrayContainer.classList.contains("visible")) {
+        customArrayContainer.classList.remove("visible"); // Hide the container
+    } else {
+        customArrayContainer.classList.add("visible"); // Show the container
+    }
+};
+
 document.querySelector(".icon").addEventListener("click", response);
 document.querySelector(".start").addEventListener("click", start);
 document.querySelector(".size-menu").addEventListener("change", RenderScreen);
 document.querySelector(".algo-menu").addEventListener("change", RenderScreen);
+document.getElementById("custom-array-submit").addEventListener("click", handleCustomArray);
+document.getElementById("custom-array-link").addEventListener("click", toggleCustomArrayVisibility);
 window.onload = RenderScreen;
