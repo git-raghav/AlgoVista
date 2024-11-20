@@ -11,6 +11,9 @@ body {
 	overflow-y: auto; /* Allow vertical scrolling if necessary */
 	position: relative; /* Position for z-index control */
 }
+body::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
+}
 
 .container {
 	width: 90%;
