@@ -1,0 +1,183 @@
+html,
+body {
+	height: 100%;
+	background-color: #212121;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
+}
+* {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+html #home,
+body #home {
+	background-color: inherit;
+}
+nav {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+.graph {
+	background: #212121;
+	border-top: 5px solid #212121;
+	border-left: 25px solid #212121;
+	height: calc(100vh - 87px) !important;
+}
+.graph canvas[resize] {
+	width: 100%;
+	height: 100%;
+}
+a {
+	cursor: pointer !important;
+}
+
+.bg-nav {
+	background: -webkit-gradient(linear, left bottom, right top, from(#00bf8f), to(#102d58));
+	background: linear-gradient(to top right, #00bf8f, #102d58);
+}
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu a::after {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	position: absolute;
+	right: 6px;
+	top: 0.8em;
+}
+.dropdown-submenu .dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-left: 0.1rem;
+	margin-right: 0.1rem;
+}
+
+.dropdown-item {
+	background-color: #212121 !important;
+	color: #faf0e6 !important;
+}
+
+.dropdown-item:hover {
+	background-color: #1abc9c !important;
+}
+
+.dropdown-menu {
+	background-color: #212121 !important;
+	border-radius: 10px !important;
+	border: 1px solid #faf0e6 !important;
+}
+
+#logo-container {
+	display: inline-block; /* Allows the logo to align with other elements in the navbar */
+	margin-right: 10px;
+}
+
+#logo-container img {
+	height: 30px;
+	width: auto;
+	cursor: pointer;
+}
+
+#logo-container a {
+	text-decoration: none; /* Remove underline */
+}
+
+.navbar-brand {
+	color: #faf0e6 !important;
+	font-weight: bold;
+	margin-right: 80px !important;
+}
+
+.navbar-brand:hover {
+	color: #1abc9c !important;
+	transition: ease-in 0.3s;
+	transition: ease-out 0.3s;
+}
+
+#fill-block {
+	color: #faf0e6 !important;
+	margin-right: 20px;
+}
+#algo-choice {
+	color: #faf0e6 !important;
+	margin-right: 20px;
+}
+#trivia {
+	color: #faf0e6 !important;
+	margin-right: 20px;
+}
+
+#fill-block:hover {
+	color: #1abc9c !important;
+	transition: ease-in 0.3s;
+	transition: ease-out 0.3s;
+}
+#algo-choice:hover {
+	color: #1abc9c !important;
+	transition: ease-in 0.3s;
+	transition: ease-out 0.3s;
+}
+#trivia:hover {
+	color: #1abc9c !important;
+	transition: ease-in 0.3s;
+	transition: ease-out 0.3s;
+}
+.next-step {
+	background-color: #ffc107 !important;
+	padding: 4px 12px !important;
+}
+
+.dropdown-toggle::after {
+	transform: translateY(-50%) rotate(45deg);
+	border: solid #faf0e6;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 2.5px;
+	transition: transform 0.3s ease;
+	vertical-align: unset !important;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+	transform: translateY(-50%) rotate(-135deg);
+}
+.d-flex small {
+	color: #faf0e6;
+	font-size: 16px !important;
+}
+
+.d-flex .mx-auto {
+	margin-right: 20px !important;
+}
+#selected-algo-name {
+	color: #ffc107 !important;
+}
+#selected-speed-name {
+	color: #ffc107 !important;
+}
+#runner-duration {
+	color: #ffc107 !important;
+}
+#second {
+	border-top: 1px solid #1abc9c; /* Slightly thicker border */
+}
+.btn-group .btn {
+    margin-right: 10px !important;
+    border-radius: 100px !important;
+    font-weight: 600 !important;
+}
+
+.btn-group .btn:last-child {
+    margin-right: 0 !important;
+}
+.btn-group .btn:first-child {
+    /* background-color: #1abc9c !important; */
+    color: #1abc9c !important;
+    border-color: #1abc9c !important;
+}
+
+.btn-group .btn:first-child:hover {
+    background-color: #1abc9c !important;
+    color: #fff !important;
+    border-color: #1abc9c !important;
+}

@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+	margin: 0;
+	font-family: "Arial", sans-serif;
+	background-color: #212121;
+	color: #faf0e6;
+	line-height: 1.8;
+}
+
+body::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
+}
+
+/* Navbar */
+.navbar {
+	background: linear-gradient(135deg, #212121, #1abc9c);
+	padding: 1rem;
+	text-align: center;
+	border-bottom: 1px solid #212121;
+}
+
+.navbar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #faf0e6;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+	color: #1abc9c;
+}
+
+/* Hero Section */
+.hero {
+	text-align: center;
+	padding: 4rem 2rem;
+	background: linear-gradient(135deg, #212121, #1abc9c);
+	color: #faf0e6;
+}
+
+.hero h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	font-size: 1.2rem;
+}
+
+/* Content Sections (Common) */
+.content-section {
+	padding: 3rem 2rem;
+	text-align: center;
+}
+
+/* Our Story Section */
+.story-container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.story-container p {
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+
+/* Our Vision Section */
+.vision-container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: justify;
+	line-height: 1.8;
+}
+
+.vision-container p {
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+
+/* Meet the Team Section */
+.team-container {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+/* Team Member Card */
+.card {
+	width: 17em;
+	height: 22.5em;
+	background: #212121;
+	transition: 1s ease-in-out;
+	clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	color: #faf0e6;
+}
+
+.card span {
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	display: block;
+	font-size: 1em;
+}
+
+.card .info {
+	font-weight: 400;
+	color: white;
+	display: block;
+	text-align: center;
+	font-size: 0.72em;
+	margin: 1em;
+}
+/* Card Image Styling */
+/* Card Image Styling */
+.card .img {
+	width: 90px; /* Image container size */
+	height: 90px;
+	margin: 1rem auto;
+	overflow: hidden;
+	border-radius: 50%; /* Circular shape */
+	border: 3px solid #1abc9c; /* Green border for aesthetics */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #212121; /* Background to match theme */
+}
+
+.card .img img {
+	width: 100%; /* Fill the container */
+	height: 100%;
+	object-fit: cover; /* Ensure the image scales properly without distortion */
+	display: block;
+}
+
+.card .share {
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+.card a {
+	color: white;
+	transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+	color: #1abc9c;
+}
+.card:hover {
+	transform: scale(1.05);
+	/* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); */
+	box-shadow: 0 15px 20px #1abc9c;
+}
+.card button {
+	padding: 0.8em 1.7em;
+	display: block;
+	margin: auto;
+	border-radius: 25px;
+	border: none;
+	font-weight: bold;
+	background: #ffffff;
+	color: rgb(0, 0, 0);
+	transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+	background: red;
+	color: white;
+	cursor: pointer;
+}
+
+/* Footer */
+#footer {
+	background: #212121;
+	color: #faf0e6;
+	padding: 1rem; /* Reduce space */
+	text-align: center;
+	border-top: 2px solid #1abc9c;
+	font-size: 0.85rem; /* Slightly smaller font */
+	line-height: 1.4; /* Compact line spacing */
+}
+
+.footer-container p {
+	margin: 0.5rem 0; /* Reduce spacing between lines */
+}
+
+/* Contact Button */
+.contact-btn {
+	margin-top: 0.5rem;
+	padding: 0.5rem 1.5rem;
+	border: none;
+	border-radius: 20px;
+	background: #1abc9c;
+	color: #212121;
+	font-weight: bold;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+	background: #faf0e6;
+	color: #1abc9c;
+}
+
+/* Scroll Effect */
+.scroll-effect {
+	opacity: 0;
+	transform: translateY(50px); /* Start with elements slightly moved down */
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-effect.visible {
+	opacity: 1;
+	transform: translateY(0); /* Bring elements to their original position */
+}

@@ -12,6 +12,10 @@ body {
 	position: relative; /* Position for z-index control */
 }
 
+body::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
+}
+
 .container {
 	width: 90%;
 	max-width: 900px;
