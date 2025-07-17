@@ -1,88 +1,118 @@
-# AlgoVista
+<!-- Banner / Logo -->
+<p align="center">
+  <img src="logo.png" alt="AlgoVista Logo" width="180"/>
+</p>
+
+<!-- Badges -->
+<p align="center">
+  <a href="https://github.com/git-raghav/AlgoVista.git"><img src="https://img.shields.io/github/stars/git-raghav/AlgoVista?style=for-the-badge" alt="GitHub stars"></a>
+  <a href="https://github.com/git-raghav/AlgoVista/fork"><img src="https://img.shields.io/github/forks/git-raghav/AlgoVista?style=for-the-badge" alt="GitHub forks"></a>
+  <a href="https://github.com/git-raghav/AlgoVista/issues"><img src="https://img.shields.io/github/issues/git-raghav/AlgoVista?style=for-the-badge" alt="GitHub issues"></a>
+  <a href="https://git-raghav.github.io/AlgoVista/"><img src="https://img.shields.io/badge/Live%20Demo-Online-brightgreen?style=for-the-badge" alt="Live Demo"></a>
+</p>
+
+---
+
+# 🚀 AlgoVista
 
 **Unveiling Sorting and Pathfinding through Visuals**
 
-[**Live Demo**](https://git-raghav.github.io/AlgoVista/)
+<p align="center">
+  <a href="https://git-raghav.github.io/AlgoVista/"><img src="https://img.shields.io/badge/TRY%20IT%20NOW-Live%20Demo-orange?style=for-the-badge" alt="Live Demo"></a>
+</p>
 
-**AlgoVista** is an interactive web application that visualizes various sorting and pathfinding algorithms. Built for learners and enthusiasts, this project helps users understand complex algorithms through intuitive visual representations.
+<p align="center">
+  <img src="path-2.gif" alt="AlgoVista Demo" width="600"/>
+</p>
 
-## Features
+> **AlgoVista** is an interactive web application that visualizes various sorting and pathfinding algorithms. Built for learners and enthusiasts, this project helps users understand complex algorithms through intuitive visual representations.
 
--   **Sorting Algorithms Visualization:**
-    -   Bubble Sort
-    -   Merge Sort
-    -   Quick Sort
-    -   Insertion Sort
-    -   Selection Sort
-    -   More coming soon!
--   **Interactive Interface:** Real-time visualization with customizable speed controls and array sizes.
--   **Cross-platform Compatibility:** Supports modern browsers for a seamless experience.
+---
 
-## Technologies Used
+## ✨ Features
 
--   **Frontend:** HTML, CSS, JavaScript
--   **Backend & Algorithms:** Java (in progress), JavaScript
--   **Cloud Services:** Deployment pending
--   **Version Control:** Git & GitHub for project management
+-   🔢 **Sorting Algorithms Visualization:**
+    -   🫧 Bubble Sort
+    -   🧩 Merge Sort
+    -   ⚡ Quick Sort
+    -   ✍️ Insertion Sort
+    -   🎯 Selection Sort
+    -   🚀 More coming soon!
+-   🔢 **Pathfinding Algorithms Visualization:**
+    -   🫧 Dijkstras Algorithm
+    -   🧩 A star Algorithm
+    -   ⚡ BFS Algorithm
+    -   ✍️ DFS Algorithm
+    -   🚀 More coming soon!
+-   🔢 **Quiz Feature after Visualization**
+-   🕹️ **Interactive Interface:** Real-time visualization with customizable speed controls and array sizes.
+-   🌐 **Cross-platform Compatibility:** Supports modern browsers for a seamless experience.
 
-## Future Development
+---
 
--   **Pathfinding Algorithms Visualization:**
-    Coming soon! We are working on exciting features to visualize popular pathfinding algorithms like A\*, Dijkstra, and more.
+## 🛠️ Technologies Used
 
--   **Custom inputs:**
-    Users can add their own inputs and visualize them.
+-   💻 **Frontend:** HTML, CSS, JavaScript
+-   🧠 **Backend & Algorithms:** Java, JavaScript
+-   ☁️ **Cloud Services:** Deployment pending
+-   🔗 **Version Control:** Git & GitHub for project management
 
--   **Custom algorithms:**
-    Users especially researchers can add their own algorithms and visualize them.
+---
 
--   **Java-based Algorithm Implementations:**
-    Currently migrating the algorithms to Java for backend functionality and enhanced performance.
+## 🌱 Future Development
 
--   **Deployment:**
-    Final deployment is in progress. Stay tuned for updates!
+-   🧑‍💻 **Custom Algorithms:**
+    -   Researchers can add and visualize their own algorithms.
+-   ☕ **Java-based Algorithm Implementations:**
+    -   Migrating algorithms to Java for backend functionality and enhanced performance.
+-   🚀 **Deployment:**
+    -   Final deployment in progress. Stay tuned!
 
-## How to Use
+---
 
-1. Clone the repository:
-   `git clone https://github.com/git-raghav/AlgoVista.git`
+## 🏁 Quick Start
 
-2. Navigate to the project directory:
-   `cd algovista`
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/AryanSONI00/AlgoVista.git
+    ```
+2. **Navigate to the project directory:**
+    ```bash
+    cd AlgoVista
+    ```
+3. **Open the `index.html` file in your browser to start the application.**
 
-3. Open the `index.html` file in your browser to start the application.
+---
 
-## Project Status
+## 📈 Project Status
 
 **Ongoing Project** – Sorting algorithms are fully implemented, while pathfinding algorithms and Java backend integrations are coming soon.
 
-## Contributing
+---
+
+## 🤝 Contributing
 
 Contributions are welcome! Follow these steps to contribute:
 
 1. **Fork the Repository**
-   Click the "Fork" button at the top right of this page to create a copy of the repository under your GitHub account.
-
 2. **Clone Your Fork**
-   Clone the forked repository to your local machine using the following command:
-   `git clone https://github.com/git-raghav/AlgoVista.git`
-
 3. **Create a Branch**
-   Create a new branch to work on your changes:
-   `git checkout -b feature-branch-name`
-
 4. **Make Your Changes**
-   Implement your changes and commit them with a descriptive message:
-   `git add .`
-   `git commit -m "Description of changes"`
-
 5. **Push to GitHub**
-   Push your changes to your forked repository:
-   `git push origin feature-branch-name`
-
 6. **Submit a Pull Request**
-   Open a pull request on the original repository. Include a clear description of your changes and why they should be merged.
+
+For detailed steps, see the [CONTRIBUTING](CONTRIBUTING.md) guide.
 
 ---
 
-Thank you for your interest in AlgoVista! Feel free to reach out for any questions or suggestions.
+## 📣 Contact & Feedback
+
+-   💬 Open an [issue](https://github.com/git-raghav/AlgoVista/issues) for suggestions or questions
+-   🌟 Star this repo to support the project!
+
+---
+
+<p align="center">
+  <b>Thank you for your interest in AlgoVista!</b><br/>
+  <em>Happy Visualizing! 🚀</em>
+</p>
